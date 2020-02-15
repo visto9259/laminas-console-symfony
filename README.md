@@ -3,9 +3,9 @@
 
 ## Introduction
 
-`zf-console-symfony` provides a replacement for `zf-console` with a wrapper for the `symfony/console` component.
+`laminas-console-symfony` provides a replacement for `zf-console` with a wrapper for the `symfony/console` component.
 
-For developers familiar with ZF3 MVC application, this package is inspired by `zend-mvc` in its usage of modules and dependency injection using the Service Manager.
+For developers familiar with Laminas MVC application, this package is inspired by `laminas-mvc` in its usage of modules and dependency injection using the Service Manager.
 
 ## Requirements
 
@@ -15,12 +15,12 @@ Please see the [composer.json](composer.json) file.
 
 Run the following `composer` command:
 
-    $ composer require visto9259/zf-console-symfony
+    $ composer require visto9259/laminas-console-symfony
     
 Or, alternatively, manually add the following to your `composer.json`, in the `require` section:
 
     "require" : {
-        "visto9259/zf-console-symfony" : "^1.0.0"
+        "visto9259/laminas-console-symfony" : "^1.0.0"
     }
 
 And then run `composer update` to ensure the module is installed.
@@ -101,18 +101,18 @@ return [
 
 `service_manager` contains the typical ZendFramework Service Manager configuration which allows for services, factories and so on to be defined.
  
- #### Differences with `zend-mvc` applications
+ #### Differences with `laminas-mvc` applications
  
- This application is inspired by the `zend-mvc` application but it is not intended to implement a full-fledge MVC application.
+ This application is inspired by the `laminas-mvc` application but it is not intended to implement a full-fledge MVC application.
  It is a wrapper around the Symfony Console Application that provides a Service Manager for dependency injection and uses the Module Manager to load modules.
  
- The intent is that if one wants to use an existing or a custom ZendFramework module, it can be added to the list of modules to be loaded.
+ The intent is that if one wants to use an existing or a custom Laminas module, it can be added to the list of modules to be loaded.
  For example, if a module defines services to access a database, it will be loaded by the Module Manager and its services added to the Service Manager.
  
 
  
  #### Limitations in Module Configuration
- The ZFConsoleSymfony application uses the Module Manager `loadModules()` method to load modules but will only service modules that implement the `ServiceProviderInterface` and the `ConfigProviderInterface`interfaces.  All other provider interfaces are ignored.
+ The LaminasConsoleSymfony application uses the Module Manager `loadModules()` method to load modules but will only service modules that implement the `ServiceProviderInterface` and the `ConfigProviderInterface`interfaces.  All other provider interfaces are ignored.
  
  **Important:** The Module class **SHOULD NOT** implement the `BootstrapListenerInterface` and `InitProviderInterface` for the time being.  These will make the application crash.
 
