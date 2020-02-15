@@ -1,4 +1,5 @@
-# Zf-Console-Symfony: A ZF3 console app using Symfony Console
+# Laminas-Console-Symfony: A Laminas MVC console app using Symfony Console
+
 
 ## Introduction
 
