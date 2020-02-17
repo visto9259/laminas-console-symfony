@@ -1,13 +1,13 @@
 {
-    "name": "visto9259/zf-console-symfony",
-    "description": "A Zend Framework Console application based on Symfony Console",
+    "name": "visto9259/laminas-console-symfony",
+    "description": "A Laminas Framework Console application based on Symfony Console",
     "type": "library",
     "require": {
         "symfony/console": "^5.0",
-        "zendframework/zend-servicemanager": "^3.0.0",
-        "zendframework/zend-modulemanager": "~2.8.0",
-        "zendframework/zend-loader": "~2.6",
-        "zendframework/zend-config-aggregator": "~1.0"
+        "laminas/laminas-servicemanager": "^3.0.0",
+        "laminas/laminas-modulemanager": "^2.8.0",
+        "laminas/laminas-loader": "^2.6",
+        "laminas/laminas-config-aggregator": "~1.0"
     },
     "license": "MIT",
     "authors": [
@@ -18,7 +18,9 @@
     ],
     "autoload": {
         "psr-4": {
-            "ZFSymfonyConsole\\" : "src/"
+            "LaminasSymfonyConsole\\" : "src/"
         }
+    },
+    "require-dev": {
     }
 }

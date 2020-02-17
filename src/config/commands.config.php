@@ -9,7 +9,7 @@
 
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputOption;
-use ZFSymfonyConsole\Factory\AbstractCommandFactory;
+use LaminasSymfonyConsole\Factory\AbstractCommandFactory;
 
 return [
     // Array of commands to be configured (see Symfony Command documentation)
@@ -61,7 +61,7 @@ return [
     ],
     /**
      * Service Manager configuration for commands.
-     * Refer to zend-servicemanager documentation for details
+     * Refer to laminas-servicemanager documentation for details
      */
     'service_manager' => [
         'factories' => [

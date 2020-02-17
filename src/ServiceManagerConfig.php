@@ -6,11 +6,11 @@
  */
 
 
-namespace ZFSymfonyConsole;
+namespace LaminasSymfonyConsole;
 
 
-use Zend\ServiceManager\Config;
-use ZFSymfonyConsole\Factory\ModuleManagerFactory;
+use Laminas\ServiceManager\Config;
+use LaminasSymfonyConsole\Factory\ModuleManagerFactory;
 
 class ServiceManagerConfig extends Config
 {
@@ -30,6 +30,10 @@ class ServiceManagerConfig extends Config
 
     ];
 
+    /**
+     * ServiceManagerConfig constructor.
+     * @param array $config
+     */
     public function __construct(array $config = [])
     {
         $this->config['factories']['ServiceManager'] = function ($container) {

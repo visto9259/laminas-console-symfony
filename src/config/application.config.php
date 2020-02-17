@@ -1,7 +1,7 @@
 <?php
 /**
 *
-* Sample ZF-Console-Symfony Application Configuration File
+* Sample Laminas-Console-Symfony Application Configuration File
 * Copy this file into the /config directory
 */
 return [
@@ -17,7 +17,7 @@ return [
     // List of ZF modules to be loaded by zend-modulemanager
     'modules' => require __DIR__ . '/modules.config.php',
 
-    // ZF Module Manager Config Listener Options (see zend-modulemanager documentation)
+    // Laminas Module Manager Config Listener Options (see laminas-modulemanager documentation)
     'module_listener_options' => [
         'module_paths' => [
             './module',

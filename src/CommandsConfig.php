@@ -1,18 +1,19 @@
 <?php
 /**
- * @see       https://github.com/visto9259/zf-console-symfony for the canonical source repository
+ * @see       https://github.com/visto9259/laminas-console-symfony for the canonical source repository
  * @copyright Copyright (c) 2019 Eric Richer (eric.richer@vistoconsulting.com)
- * @license   https://github.com/visto9259/zf-console-symfony/LICENSE GNU GENERAL PUBLIC LICENSE
+ * @license   https://github.com/visto9259/laminas-console-symfony/LICENSE GNU GENERAL PUBLIC LICENSE
  */
 
 
-namespace ZFSymfonyConsole;
+namespace LaminasSymfonyConsole;
 
 
-use Zend\ServiceManager\Config;
-use Zend\ServiceManager\ServiceManager;
-use Zend\Stdlib\ArrayUtils;
-use ZFSymfonyConsole\Factory\AbstractCommandFactory;
+use Laminas\ServiceManager\Config;
+use Laminas\ServiceManager\ServiceManager;
+use Laminas\Stdlib\ArrayUtils;
+use LaminasSymfonyConsole\Factory\AbstractCommandFactory;
+use Exception;
 
 class CommandsConfig
 {
@@ -42,10 +43,16 @@ class CommandsConfig
      */
     protected $container;
 
+    /**
+     * CommandsConfig constructor.
+     * @param $config
+     * @param ServiceManager $container
+     * @throws Exception
+     */
     public function __construct($config, ServiceManager $container)
     {
         if (!is_array($config)) {
-            throw new \Exception('Invalid config');
+            throw new Exception('Invalid config');
         }
         $this->config = ArrayUtils::merge($this->config, $config);
 

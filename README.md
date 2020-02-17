@@ -27,7 +27,7 @@ And then run `composer update` to ensure the module is installed.
 
 ## Creating a console application
 
-The console application skeleton is based on the Zend Framework MVC Application skeleton.  It follows a similar directory structure:
+The console application skeleton is based on the Laminas Framework MVC Application skeleton.  It follows a similar directory structure:
 
     MyApp/
        config/
@@ -55,8 +55,8 @@ The `myapp.php` file contains the console application code and can be as simple 
 ```php
 require __DIR__.'/vendor/autoload.php';
      
-use Zend\Stdlib\ArrayUtils;
-use ZFSymfonyConsole\Application;
+use Laminas\Stdlib\ArrayUtils;
+use LaminasSymfonyConsole\Application;
      
 // Setup the application
 $appConfig = require __DIR__ . '/config/application.config.php_dist';
@@ -69,7 +69,7 @@ $exit = $application->run();
 ```
 ### Configuring the application
 
-The file `application_config.php` provides the configuration for the console application and for the loading of the modules using the Zend Framework Module Manager.  It contains the following:
+The file `application_config.php` provides the configuration for the console application and for the loading of the modules using the Laminas Framework Module Manager.  It contains the following:
 
 ```php
 return [
@@ -99,7 +99,7 @@ return [
 
 `modules` and `module_listener_options` are the Module Manager configuration parameters.  
 
-`service_manager` contains the typical ZendFramework Service Manager configuration which allows for services, factories and so on to be defined.
+`service_manager` contains the typical Laminas Framework Service Manager configuration which allows for services, factories and so on to be defined.
  
  #### Differences with `laminas-mvc` applications
  
@@ -125,7 +125,7 @@ A typical `commands.config.php` would contain the following:
 ```php
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputOption;
-use ZFSymfonyConsole\Factory\AbstractCommandFactory;
+use LaminasSymfonyConsole\Factory\AbstractCommandFactory;
 
 return [
     'commands' => [
@@ -169,7 +169,7 @@ return [
 The`arguments` and `options` arrays contains lists of Symfony `InputArgument`and `InputOptions` definitions.
 
 The `class` element of a command definition refers to the name of the class that implements the Symfony Command.  It is mandatory that the class extends the `Symfony\Component\Console\Command\Command` class.
-`class`can either by a class name or a string.  The application will use the ZendFramework Service Manager to instantiate the class which allows for the use of factories to create the command and inject dependencies.
+`class`can either by a class name or a string.  The application will use the Laminas Framework Service Manager to instantiate the class which allows for the use of factories to create the command and inject dependencies.
 `class` can also be an instance of a `Symfony\Component\Console\Command\Command` class.
 
 `service_manager` contains the typical Service Manager configuration that will be added to the application Service Manager.  

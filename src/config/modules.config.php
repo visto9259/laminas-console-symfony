@@ -7,5 +7,5 @@
  */
 
 return [
-    // list of ZF Modules
+    // list of Laminas Modules
 ];

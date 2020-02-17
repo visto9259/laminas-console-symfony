@@ -1,22 +1,22 @@
 <?php
 
 /**
- * @see       https://github.com/visto9259/zf-console-symfony for the canonical source repository
+ * @see       https://github.com/visto9259/laminas-console-symfony for the canonical source repository
  * @copyright Copyright (c) 2019 Eric Richer (eric.richer@vistoconsulting.com)
- * @license   https://github.com/visto9259/zf-console-symfony/LICENSE GNU GENERAL PUBLIC LICENSE
+ * @license   https://github.com/visto9259/laminas-console-symfony/LICENSE GNU GENERAL PUBLIC LICENSE
  */
 
-namespace ZFSymfonyConsole\Factory;
+namespace LaminasSymfonyConsole\Factory;
 
 
 use Interop\Container\ContainerInterface;
-use Zend\EventManager\EventManager;
-use Zend\ModuleManager\Feature\ServiceProviderInterface;
-use Zend\ModuleManager\Listener\DefaultListenerAggregate;
-use Zend\ModuleManager\Listener\ListenerOptions;
-use Zend\ModuleManager\Listener\ServiceListener;
-use Zend\ModuleManager\ModuleManager;
-use Zend\ServiceManager\Factory\FactoryInterface;
+use Laminas\EventManager\EventManager;
+use Laminas\ModuleManager\Feature\ServiceProviderInterface;
+use Laminas\ModuleManager\Listener\DefaultListenerAggregate;
+use Laminas\ModuleManager\Listener\ListenerOptions;
+use Laminas\ModuleManager\Listener\ServiceListener;
+use Laminas\ModuleManager\ModuleManager;
+use Laminas\ServiceManager\Factory\FactoryInterface;
 
 class ModuleManagerFactory implements FactoryInterface
 {

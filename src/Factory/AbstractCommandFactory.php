@@ -1,17 +1,17 @@
 <?php
 /**
- * @see       https://github.com/visto9259/zf-console-symfony for the canonical source repository
+ * @see       https://github.com/visto9259/laminas-console-symfony for the canonical source repository
  * @copyright Copyright (c) 2019 Eric Richer (eric.richer@vistoconsulting.com)
- * @license   https://github.com/visto9259/zf-console-symfony/LICENSE GNU GENERAL PUBLIC LICENSE
+ * @license   https://github.com/visto9259/laminas-console-symfony/LICENSE GNU GENERAL PUBLIC LICENSE
  */
 
 
-namespace ZFSymfonyConsole\Factory;
+namespace LaminasSymfonyConsole\Factory;
 
 
 use Interop\Container\ContainerInterface;
 use Symfony\Component\Console\Command\Command;
-use Zend\ServiceManager\Factory\AbstractFactoryInterface;
+use Laminas\ServiceManager\Factory\AbstractFactoryInterface;
 
 class AbstractCommandFactory implements AbstractFactoryInterface
 {
